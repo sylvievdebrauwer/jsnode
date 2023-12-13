@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require("fs");
 const path = require("path");
 
 const htmlContent = '<h1>Index<h1>';
@@ -6,11 +6,10 @@ const cssContent = 'body { background-color: #ded4b8; }';
 
 try {
     const indexPath = path.join(__dirname, "index.html");
-    const stylePath = path.join(__dirname, 'style.css');
+    const stylePath = path.join(__dirname, "style.css");
 
     fs.writeFileSync(indexPath, htmlContent);
     fs.writeFileSync(stylePath, cssContent);
-
     fs.appendFileSync(indexPath, '<link rel="stylesheet" href="style.css"></link>');
     console.log(path.basename(__filename));
 
@@ -18,3 +17,16 @@ try {
     console.error(err.code);
     console.error(err.message);
   }
+
+  function createContactPage(){
+    const indexPath = path.join(__dirname, "clients/contact/index.html")
+
+  }
+
+try {
+    fs.mkdirSync(path.join(__dirname, "contact"));
+
+} catch (err) {
+    console.error("Error code:", err.code);
+    console.error(err.message);
+}
