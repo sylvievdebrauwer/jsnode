@@ -18,11 +18,6 @@ try {
     console.error(err.message);
   }
 
-  function createContactPage(){
-    const indexPath = path.join(__dirname, "clients/contact/index.html")
-
-  }
-
 try {
     fs.mkdirSync(path.join(__dirname, "contact"));
 
@@ -30,3 +25,20 @@ try {
     console.error("Error code:", err.code);
     console.error(err.message);
 }
+
+try {
+    fs.mkdirSync(path.join(__dirname, "about"));
+
+} catch (err) {
+    console.error("Error code:", err.code);
+    console.error(err.message);
+}
+
+try {
+    fs.mkdirSync(path.join(__dirname, "blog"));
+
+} catch (err) {
+    console.error("Error code:", err.code);
+    console.error(err.message);
+}
+
