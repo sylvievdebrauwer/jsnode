@@ -1,0 +1,19 @@
+{
+  "name": "clients",
+  "version": "1.0.0",
+  "description": "first nodejs exercise called clients",
+  "main": "server.js",
+  "scripts": {
+    "test": "\"Error: no test specified\" && exit 1 command",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "clients"
+  },
+  "keywords": [
+    "[]"
+  ],
+  "author": "Sylvie",
+  "license": "ISC"
+}
