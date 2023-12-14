@@ -35,11 +35,25 @@ try {
 
 try {
     fs.mkdirSync(path.join(__dirname, "clients/contact"));
-
 } catch (err) {
     console.error("Error code:", err.code);
     console.error(err.message);
 }
+try {
+  const filePath = path.join(__dirname, "clients" , "contact" , "index.html");
+  fs.writeFileSync(filePath, "<head><link href='style.css' rel='stylesheet'></head>");
+  fs.appendFileSync(filePath, "<body><h1>Contact</h1></body>");
+} catch (err) {
+  console.error(err.code);
+  console.error(err.message);
+  }
+  try {
+    const filePath = path.join(__dirname, "clients", "contact", "style.css");
+    fs.writeFileSync(filePath, "body {background-color: #887c9c;}");
+  } catch (err) {
+    console.error(err.code);
+    console.error(err.message);
+  }
 
 try {
     fs.mkdirSync(path.join(__dirname, "clients/about"));
@@ -48,6 +62,22 @@ try {
     console.error("Error code:", err.code);
     console.error(err.message);
 }
+try {
+  const filePath = path.join(__dirname, "clients" , "about" , "index.html");
+  fs.writeFileSync(filePath, "<head><link href='style.css' rel='stylesheet'></head>");
+  fs.appendFileSync(filePath, "<body><h1>About</h1></body>");
+} catch (err) {
+  console.error(err.code);
+  console.error(err.message);
+  }
+  try {
+    const filePath = path.join(__dirname, "clients", "about", "style.css");
+    fs.writeFileSync(filePath, "body {background-color: #7a8da3;}");
+  } catch (err) {
+    console.error(err.code);
+    console.error(err.message);
+  }
+
 
 try {
     fs.mkdirSync(path.join(__dirname, "clients/blog"));
@@ -56,6 +86,22 @@ try {
     console.error("Error code:", err.code);
     console.error(err.message);
 }
+try {
+  const filePath = path.join(__dirname, "clients" , "blog" , "index.html");
+  fs.writeFileSync(filePath, "<head><link href='style.css' rel='stylesheet'></head>");
+  fs.appendFileSync(filePath, "<body><h1>Blog</h1></body>");
+} catch (err) {
+  console.error(err.code);
+  console.error(err.message);
+  }
+  try {
+    const filePath = path.join(__dirname, "clients", "blog", "style.css");
+    fs.writeFileSync(filePath, "body {background-color: #baa29b;}");
+  } catch (err) {
+    console.error(err.code);
+    console.error(err.message);
+  }
+
 
 function createContactPage() {
     const indexPath = path.join(__dirname, "clients/contact/index.html");
